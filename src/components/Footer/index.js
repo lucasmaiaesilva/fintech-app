@@ -1,11 +1,16 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const Footer = () => (
+const Footer = ({author}) => (
   <footer>
     <div className='container'>
-      <p>Feito por: Lucas Maia e Silva</p>
+      <p>Feito por: {author}</p>
     </div>
   </footer>
 )
+
+Footer.propTypes = {
+  author: PropTypes.string.isRequired
+}
 
 export default Footer
