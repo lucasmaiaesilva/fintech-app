@@ -25,7 +25,7 @@ class App extends Component {
           </div>
         </section>
         <NewsForm />
-        <Footer />
+        <Footer author='Lucas Maia e Silva' />
       </div>
     )
   }
