@@ -1,12 +1,12 @@
 import React from 'react'
 
-const CardFooter = () => (
+const CardFooter = ({total_value, website}) => (
   <div className='card-footer'>
     <div className='card-footer-value'>
-      BRL 4.394,92
+      {`BRL ${total_value}`}
     </div>
     <div className='card-footer-ref'>
-      <a href='#'>www.ar.com</a>
+      <a href='{website}'>{website}</a>
     </div>
   </div>
 )

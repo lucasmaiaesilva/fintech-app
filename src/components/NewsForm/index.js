@@ -8,7 +8,7 @@ const NewsForm = () => (
         <input type='text' id='name' />
         <label htmlFor='email'>email:</label>
         <input type='text' id='email' />
-        <button>Quero receber as cotações via email</button>
+        <button type='submit'>Quero receber as cotações via email</button>
       </form>
     </div>
   </section>

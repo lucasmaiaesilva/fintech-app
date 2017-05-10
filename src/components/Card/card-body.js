@@ -1,12 +1,12 @@
 import React from 'react'
 
-const CardBody = () => (
+const CardBody = ({acronym, quantity}) => (
   <div className='card-body'>
     <span className='money'>
-      $
+      {acronym}
     </span>
     <span className='card-body-value'>
-      1500,00
+      {quantity}
     </span>
   </div>
 )
