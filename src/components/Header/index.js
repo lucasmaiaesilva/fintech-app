@@ -3,7 +3,7 @@ import React from 'react'
 const Header = () => (
   <header>
     <div className='container'>
-      header
+      Bee Tech - challenge
     </div>
   </header>
 )
