@@ -9,8 +9,10 @@ const NewsForm = ({handleSubmit, handleChange}) => (
           <label htmlFor='name'>nome:</label>
           <input onChange={handleChange} type='text' id='name' name='name' required />
           <label htmlFor='email'>email:</label>
-          <input onChange={handleChange} type='text' id='email' name='email' required />
-          <button type='submit'>Quero receber as cotações via email</button>
+          <input onChange={handleChange} type='email' id='email' name='email' required />
+          <div className='submit-block'>
+            <button type='submit'>Quero receber as cotações via email</button>
+          </div>
         </form>
       </div>
     </div>
