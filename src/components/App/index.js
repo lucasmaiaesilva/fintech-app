@@ -42,6 +42,12 @@ class App extends Component {
         })
       })
   }
+  postNewsForm (url, obj) {
+    axios.post(url, obj)
+    .then(function (response) {
+      alert(`Dados enviados com sucesso, retorno status ${response.status}`)
+    })
+  }
   renderCards (arr) {
     return arr.map((card, index) => (
       <Card
@@ -59,8 +65,10 @@ class App extends Component {
   handleSubmit (e) {
     e.preventDefault()
     // do the logic of submit here
-    console.log('name', this.state.name)
-    console.log('email', this.state.email)
+    this.postNewsForm('http://demo3643409.mockable.io/newsletter', {
+      name: this.state.name,
+      email: this.state.email
+    })
   }
   handleChange (e) {
     this.setState({
