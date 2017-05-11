@@ -42,8 +42,8 @@ class App extends Component {
         })
       })
   }
-  postNewsForm (url, obj) {
-    axios.post(url, obj)
+  postNewsForm (url, obj, config) {
+    axios.post(url, obj, config)
     .then(function (response) {
       alert(`Dados enviados com sucesso, retorno status ${response.status}`)
     })
@@ -68,6 +68,10 @@ class App extends Component {
     this.postNewsForm('http://demo3643409.mockable.io/newsletter', {
       name: this.state.name,
       email: this.state.email
+    }, {
+      headers: {
+        autenthication: 'desafiobeetech'
+      }
     })
   }
   handleChange (e) {
