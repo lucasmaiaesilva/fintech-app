@@ -27,10 +27,12 @@ class App extends Component {
   }
   componentDidMount () {
     this.getCotations('http://demo3643409.mockable.io/quotations')
-    // setInterval(this.getCotations('http://demo3643409.mockable.io/quotations'), 1000)
+    this.timerId = setInterval(
+      () => this.getCotations('http://demo3643409.mockable.io/quotations'), 10000
+    )
   }
   componentWillUnmount () {
-    // clearInterval(this.timerId)
+    clearInterval(this.timerId)
   }
   getCotations (url) {
     this.setState({isFetching: true})
