@@ -2,6 +2,11 @@
 *
   margin 0
   padding 0
+
+.blokk
+  color #fff
+  font-family 'BLOKK', sans-serif
+
 body
   font-family: 'Raleway', sans-serif
   .container
@@ -10,6 +15,51 @@ body
   header
     color #fff
     background rgb(43, 49, 60)
-  .blokk
-    color #fff
-    font-family 'BLOKK', sans-serif
+    height 70px
+    display flex
+    align-items center
+    justify-content center
+
+@import "card.styl"
+
+.news
+  h3
+    text-align center
+    margin 50px 0
+  .news-form
+    font-size 1.3em
+    display flex
+    width 40%
+    margin 0 auto
+    padding-bottom 80px
+    form
+      width 100%
+      label
+        margin-top 15px
+        display block
+      input
+        font-size 1.1em
+        padding 6px 12px
+        box-sizing border-box
+        display block
+        width 100%
+        outline none
+      button
+        background #00796B
+        outline none
+        border none
+        color #fff
+        margin 15px 0
+        font-size .8em
+        padding 10px 12px
+
+
+footer
+  height 60px
+  background rgb(54,53,90)
+  color #fff
+  display flex
+  align-items center
+  p
+    text-align right
+    font-size .9em

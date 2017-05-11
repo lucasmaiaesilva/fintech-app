@@ -1,15 +1,18 @@
 import React from 'react'
 
-const NewsForm = () => (
+const NewsForm = ({handleSubmit, handleChange}) => (
   <section className='news'>
+    <h3>Receba as melhores cotações via email</h3>
     <div className='container'>
-      <form>
-        <label htmlFor='name'>nome:</label>
-        <input type='text' id='name' />
-        <label htmlFor='email'>email:</label>
-        <input type='text' id='email' />
-        <button type='submit'>Quero receber as cotações via email</button>
-      </form>
+      <div className='news-form'>
+        <form onSubmit={handleSubmit}>
+          <label htmlFor='name'>nome:</label>
+          <input onChange={handleChange} type='text' id='name' name='name' required />
+          <label htmlFor='email'>email:</label>
+          <input onChange={handleChange} type='text' id='email' name='email' required />
+          <button type='submit'>Quero receber as cotações via email</button>
+        </form>
+      </div>
     </div>
   </section>
 )

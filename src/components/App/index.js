@@ -18,12 +18,23 @@ class App extends Component {
     this.state = {
       isFetching: false,
       notFound: false,
-      result: []
+      result: [],
+      name: 'test',
+      email: 'test@beetech.com'
     }
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleChange = this.handleChange.bind(this)
   }
   componentDidMount () {
+    this.getCotations('http://demo3643409.mockable.io/quotations')
+    // setInterval(this.getCotations('http://demo3643409.mockable.io/quotations'), 1000)
+  }
+  componentWillUnmount () {
+    // clearInterval(this.timerId)
+  }
+  getCotations (url) {
     this.setState({isFetching: true})
-    axios.get('http://demo3643409.mockable.io/quotations')
+    axios.get(url)
       .then(res => {
         this.setState({
           result: res.data.result,
@@ -45,17 +56,33 @@ class App extends Component {
         />
     ))
   }
+  handleSubmit (e) {
+    e.preventDefault()
+    // do the logic of submit here
+    console.log('name', this.state.name)
+    console.log('email', this.state.email)
+  }
+  handleChange (e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
   render () {
     return (
       <div className='App'>
         <Header />
         <section className='cards'>
           <div className='container'>
-            {this.state.isFetching && <div>Carregando...</div>}
-            {this.state.result !== [] && this.renderCards(this.state.result)}
+            <div className='card-line'>
+              {this.state.isFetching && <div>Carregando...</div>}
+              {this.state.result !== [] && this.renderCards(this.state.result)}
+            </div>
           </div>
         </section>
-        <NewsForm />
+        <NewsForm
+          handleSubmit={this.handleSubmit}
+          handleChange={this.handleChange}
+        />
         <Footer author='Lucas Maia e Silva' />
       </div>
     )
