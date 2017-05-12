@@ -6,7 +6,7 @@ const CardFooter = ({total_value, website}) => (
       {`BRL ${total_value}`}
     </div>
     <div className='card-footer-ref'>
-      <a href='{website}'>{website}</a>
+      <a href={website}>{website}</a>
     </div>
   </div>
 )
