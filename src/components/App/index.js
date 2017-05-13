@@ -6,6 +6,7 @@ import '../../assets/stylus/App.styl'
 // components
 import Header from '../Header'
 import Card from '../Card'
+import Loading from './loading'
 import NewsForm from '../NewsForm'
 import Footer from '../Footer'
 
@@ -88,7 +89,7 @@ class App extends Component {
         <section className='cards'>
           <div className='container'>
             <div className='card-line'>
-              {this.state.isFetching && <div>Carregando...</div>}
+              {this.state.isFetching && <Loading />}
               {this.state.result !== [] && this.renderCards(this.state.result)}
             </div>
           </div>
