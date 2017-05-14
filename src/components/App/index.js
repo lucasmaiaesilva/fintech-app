@@ -48,7 +48,7 @@ class App extends Component {
   postNewsForm (url, obj, config) {
     axios.post(url, obj, config)
     .then(function (response) {
-      alert(`Dados enviados com sucesso, retorno status ${response.status}`)
+      window.alert(`Dados enviados com sucesso, retorno status ${response.status}`)
     })
   }
   renderCards (arr) {
