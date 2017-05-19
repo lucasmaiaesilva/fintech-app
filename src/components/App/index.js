@@ -27,9 +27,10 @@ class App extends Component {
     this.handleChange = this.handleChange.bind(this)
   }
   componentDidMount () {
-    this.getCotations('http://demo3643409.mockable.io/quotations')
+    let url = 'http://demo3643409.mockable.io/quotations'
+    this.getCotations(url)
     this.timerId = setInterval(
-      () => this.getCotations('http://demo3643409.mockable.io/quotations'), 10000
+      () => this.getCotations(url), 10000
     )
   }
   componentWillUnmount () {
