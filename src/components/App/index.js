@@ -68,7 +68,6 @@ class App extends Component {
   }
   handleSubmit (e) {
     e.preventDefault()
-    // do the logic of submit here
     this.postNewsForm('http://demo3643409.mockable.io/newsletter', {
       name: this.state.name,
       email: this.state.email
