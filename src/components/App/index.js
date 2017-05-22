@@ -6,7 +6,7 @@ import '../../assets/stylus/App.styl'
 // components
 import Header from '../Header'
 import Card from '../Card'
-import Loading from './loading'
+import Loading from '../utils/loading'
 import NewsForm from '../NewsForm'
 import Footer from '../Footer'
 
