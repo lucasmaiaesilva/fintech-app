@@ -26,14 +26,14 @@ class App extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
   }
-  componentDidMount () {
+  async componentDidMount () {
     let url = 'http://demo3643409.mockable.io/quotations'
     this.getCotations(url)
     this.timerId = setInterval(
       () => this.getCotations(url), 10000
     )
   }
-  componentWillUnmount () {
+  async componentWillUnmount () {
     clearInterval(this.timerId)
   }
   getCotations (url) {
