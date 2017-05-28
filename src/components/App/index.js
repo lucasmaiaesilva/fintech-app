@@ -11,7 +11,7 @@ import NewsForm from '../NewsForm'
 import Footer from '../Footer'
 
 // actions
-import axios from 'axios'
+import {getCotations, postNewsForm} from '../utils/cotation'
 
 class App extends Component {
   constructor () {
@@ -26,31 +26,23 @@ class App extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
   }
-  async componentDidMount () {
-    let url = 'http://demo3643409.mockable.io/quotations'
-    this.getCotations(url)
+  async fetchData () {
+    this.setState({isFetching: true})
+    const url = 'http://demo3643409.mockable.io/quotations'
+    let cotations = await getCotations(url)
+    this.setState({
+      isFetching: false,
+      result: cotations.data.result
+    })
+  }
+  componentDidMount () {
+    this.fetchData()
     this.timerId = setInterval(
-      () => this.getCotations(url), 10000
+      () => this.fetchData(), 10000
     )
   }
-  async componentWillUnmount () {
+  componentWillUnmount () {
     clearInterval(this.timerId)
-  }
-  getCotations (url) {
-    this.setState({isFetching: true})
-    axios.get(url)
-      .then(res => {
-        this.setState({
-          result: res.data.result,
-          isFetching: false
-        })
-      })
-  }
-  postNewsForm (url, obj, config) {
-    axios.post(url, obj, config)
-    .then(function (response) {
-      window.alert(`Dados enviados com sucesso, retorno status ${response.status}`)
-    })
   }
   renderCards (arr) {
     return arr.map((card, index) => (
@@ -68,15 +60,15 @@ class App extends Component {
   }
   handleSubmit (e) {
     e.preventDefault()
-    let url = 'http://demo3643409.mockable.io/newsletter'
-    this.postNewsForm(url, {
-      name: this.state.name,
-      email: this.state.email
-    }, {
-      headers: {
-        autenthication: 'desafiobeetech'
-      }
-    })
+    // let url = 'http://demo3643409.mockable.io/newsletter'
+    // cotation.postNewsForm(url, {
+    //   name: this.state.name,
+    //   email: this.state.email
+    // }, {
+    //   headers: {
+    //     autenthication: 'desafiobeetech'
+    //   }
+    // })
   }
   handleChange (e) {
     this.setState({
