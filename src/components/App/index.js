@@ -44,6 +44,23 @@ class App extends Component {
   componentWillUnmount () {
     clearInterval(this.timerId)
   }
+  handleSubmit (e) {
+    e.preventDefault()
+    let url = 'http://demo3643409.mockable.io/newsletter'
+    postNewsForm(url, {
+      name: this.state.name,
+      email: this.state.email
+    }, {
+      headers: {
+        autenthication: 'desafiobeetech'
+      }
+    })
+  }
+  handleChange (e) {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
   renderCards (arr) {
     return arr.map((card, index) => (
       <Card
@@ -57,23 +74,6 @@ class App extends Component {
         total_value={Number(card.total_value)}
         />
     ))
-  }
-  handleSubmit (e) {
-    e.preventDefault()
-    // let url = 'http://demo3643409.mockable.io/newsletter'
-    // cotation.postNewsForm(url, {
-    //   name: this.state.name,
-    //   email: this.state.email
-    // }, {
-    //   headers: {
-    //     autenthication: 'desafiobeetech'
-    //   }
-    // })
-  }
-  handleChange (e) {
-    this.setState({
-      [e.target.name]: e.target.value
-    })
   }
   render () {
     return (
