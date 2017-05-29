@@ -5,7 +5,7 @@ import CardBody from './card-body'
 import CardFooter from './card-footer'
 
 const Card = (props) => (
-  <div className='card'>
+  <div className='cards__card'>
     <CardHeader
       name={props.name}
       flag={props.flag}

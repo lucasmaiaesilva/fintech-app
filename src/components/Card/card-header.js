@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const CardHeader = ({name, flag}) => (
-  <div className='card-header'>
-    <div className='card-header-title'>
+  <div className='cards__cardHeader'>
+    <div>
       {name}
     </div>
-    <div className='card-header-flag'>
+    <div>
       <img src={flag} alt='flag' />
     </div>
   </div>

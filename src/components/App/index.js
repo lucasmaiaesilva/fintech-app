@@ -82,7 +82,7 @@ class App extends Component {
         <section className='cards'>
           <div className='container'>
             {this.state.isFetching && <Loading />}
-            <div className='card-line'>
+            <div className='cards__cardLine'>
               {this.state.result !== [] && this.renderCards(this.state.result)}
             </div>
           </div>
