@@ -2,8 +2,8 @@ import React from 'react'
 
 const Header = () => (
   <header>
-    <div className='container'>
-      Bee Tech - challenge
+    <div className='headerContainer'>
+      <p className='headerContainer__title'>Bee Tech - challenge</p>
     </div>
   </header>
 )
