@@ -4,7 +4,7 @@ const NewsForm = ({handleSubmit, handleChange}) => (
   <section className='news'>
     <h3>Receba as melhores cotações via email</h3>
     <div className='container'>
-      <div className='news-form'>
+      <div className='news__form'>
         <form onSubmit={handleSubmit}>
           <label htmlFor='name'>nome:</label>
           <input onChange={handleChange} type='text' id='name' name='name' required />
