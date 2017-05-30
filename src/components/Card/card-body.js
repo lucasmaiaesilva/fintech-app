@@ -1,11 +1,11 @@
 import React from 'react'
 
 const CardBody = ({acronym, quantity}) => (
-  <div className='card-body'>
-    <span className='money'>
+  <div className='cards__cardBody'>
+    <span className='cards__money'>
       {acronym}
     </span>
-    <span className='card-body-value'>
+    <span className='cards__bodyValue'>
       {quantity}
     </span>
   </div>
