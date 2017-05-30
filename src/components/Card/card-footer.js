@@ -1,11 +1,11 @@
 import React from 'react'
 
 const CardFooter = ({total_value, website}) => (
-  <div className='card-footer'>
-    <div className='card-footer-value'>
+  <div className='cards__cardFooter'>
+    <div className='cards__footerValue'>
       {`BRL ${total_value}`}
     </div>
-    <div className='card-footer-ref'>
+    <div className='cards__footerRef'>
       <a href={website}>{website}</a>
     </div>
   </div>
