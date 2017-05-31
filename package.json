@@ -23,7 +23,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --require tests/setup.js --env=jsdom --coverage --watch",
+    "test": "react-scripts test --require tests/setup.js --env=jsdom --watch",
+    "test:watch": "npm run test -- --watch",
+    "test:coverage": "npm run test:watch -- --coverage",
     "eject": "react-scripts eject"
   }
 }
