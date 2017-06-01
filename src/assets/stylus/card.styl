@@ -1,41 +1,42 @@
 .cards
   padding 70px 0
   background rgb(245,245,245)
-  .cards__cardLine
+  .cards__line
     display flex
     justify-content space-between
-    .cards__card
-      width 30%
-      background #fff
-      border-radius 5px
-      border 1px solid #dedede
-      color rgb(140,140,140)
-      .cards__cardHeader
-        font-size 1.4em
-        background rgba(0,0,0, .08)
-        padding 15px
-        display flex
-        align-items center
-        justify-content space-between
-      .cards__cardBody
-        margin 50px 0
-        display flex
-        align-items center
-        justify-content center
-        .cards__money
-          align-self flex-start
-          margin 10px
-        .cards__bodyValue
-          font-size 2.5em
-          color rgb(54,53,90)
-      .cards__cardFooter
-        margin 15px
-        display flex
-        align-items center
-        justify-content space-between
-        .cards__footerValue
-          color rgb(54,53,90)
-          font-size 1.3em
-        .cards__footerRef
-          align-self flex-end
-          font-size .6em
+
+.cards__card
+  width 30%
+  background #fff
+  border-radius 5px
+  border 1px solid #dedede
+  color rgb(140,140,140)
+  .cards__card--header
+    font-size 1.4em
+    background rgba(0,0,0, .08)
+    padding 15px
+    display flex
+    align-items center
+    justify-content space-between
+  .cards__card--body
+    margin 50px 0
+    display flex
+    align-items center
+    justify-content center
+    .cards__money
+      align-self flex-start
+      margin 10px
+    .cards__card--body-value
+      font-size 2.5em
+      color rgb(54,53,90)
+  .cards__card--footer
+    margin 15px
+    display flex
+    align-items center
+    justify-content space-between
+    .cards__card--footer-value
+      color rgb(54,53,90)
+      font-size 1.3em
+    .cards__footer-ref
+      align-self flex-end
+      font-size .6em
