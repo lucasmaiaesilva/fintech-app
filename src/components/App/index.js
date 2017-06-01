@@ -1,17 +1,11 @@
 import React, {Component} from 'react'
-
-// styles
-import '../../assets/stylus/App.styl'
-
-// components
 import Header from '../Header'
 import Card from '../Card'
 import Loading from '../utils/loading'
 import NewsForm from '../NewsForm'
 import Footer from '../Footer'
-
-// actions
 import {getCotations, postNewsForm} from '../utils/cotation'
+import '../../assets/stylus/App.styl'
 
 class App extends Component {
   constructor () {
@@ -82,7 +76,7 @@ class App extends Component {
         <section className='cards'>
           <div className='container'>
             {this.state.isFetching && <Loading />}
-            <div className='cards__cardLine'>
+            <div className='cards__line'>
               {this.state.result !== [] && this.renderCards(this.state.result)}
             </div>
           </div>

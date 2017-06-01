@@ -1,9 +1,6 @@
-// Libs
 import React from 'react'
 import {render} from 'enzyme'
 import {expect} from 'chai'
-
-// component
 import Header from '../src/components/Header'
 
 describe('<Header />', () => {

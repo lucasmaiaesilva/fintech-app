@@ -1,10 +1,7 @@
-// Libs
 import React from 'react'
 import {mount} from 'enzyme'
 import {expect} from 'chai'
 import sinon from 'sinon'
-
-// Components
 import App from '../src/components/App'
 import Header from '../src/components/Header'
 import Card from '../src/components/Card'

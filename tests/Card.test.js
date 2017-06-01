@@ -1,9 +1,6 @@
-// libs
 import React from 'react'
 import {shallow} from 'enzyme'
 import {expect} from 'chai'
-
-// components
 import Card from '../src/components/Card'
 import CardHeader from '../src/components/Card/card-header'
 import CardBody from '../src/components/Card/card-body'
