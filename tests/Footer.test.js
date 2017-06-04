@@ -15,7 +15,7 @@ describe('<Footer />', () => {
     const wrapper = shallow(<Footer author='paulo' />)
     expect(wrapper.contains(<p>Feito por: paulo</p>)).to.be.equal(true)
   })
-  it('Did the component have a author property', () => {
+  it('Did the component have a author property in proptypes', () => {
     expect(Footer.propTypes).to.have.property('author')
   })
   // it('Did the component return an error if author prop is not a string', () => {
