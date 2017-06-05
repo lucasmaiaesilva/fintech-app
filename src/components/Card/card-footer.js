@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const CardFooter = ({total_value, website}) => (
   <div className='cards__card--footer'>
@@ -10,5 +11,10 @@ const CardFooter = ({total_value, website}) => (
     </div>
   </div>
 )
+
+CardFooter.propTypes = {
+  total_value: PropTypes.number.isRequired,
+  website: PropTypes.string.isRequired
+}
 
 export default CardFooter
