@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const CardBody = ({acronym, quantity}) => (
   <div className='cards__card--body'>
@@ -10,5 +11,10 @@ const CardBody = ({acronym, quantity}) => (
     </span>
   </div>
 )
+
+CardBody.propTypes = {
+  acronym: PropTypes.string.isRequired,
+  quantity: PropTypes.number.isRequired
+}
 
 export default CardBody
