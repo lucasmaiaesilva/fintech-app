@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const NewsForm = ({handleSubmit, handleChange}) => (
   <section className='news'>
@@ -18,5 +19,10 @@ const NewsForm = ({handleSubmit, handleChange}) => (
     </div>
   </section>
 )
+
+NewsForm.propTypes = {
+  handleSubmit: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired
+}
 
 export default NewsForm
